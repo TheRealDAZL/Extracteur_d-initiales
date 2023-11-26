@@ -1,8 +1,9 @@
 ﻿// Titre : créer des initiales à partir de strings pleins de caractères superflus, tout en redonnant des initiales bien formatées
-
 // NOTE IMPORTANTE : pour une raison que j'ignore les symboles "Ÿ", "Æ" et "Œ" ne sortent pas comme il le faut pendant l'exécution du programme.
 // Pourquoi? Peut-être parce que ces symboles sont mal supportés. C'est la seule explication que je vois en ce moment. J'ai donc enlevé ces symboles
 // du string[] SYMBOLES_AUTORISES
+
+
 
 // Déclarer, puis initialiser le string[] SYMBOLES_AUTORISES de constantes et le string initiales
 // Note : j'ai ajouté les chiffres dans les initiales possibles, en raison du nom de l'enfant d'Elon Musk.
@@ -63,13 +64,17 @@ while (initiales == "")
             {
                 // Si la valeur de detection[0] est false
                 if (!detection[0])
-                { 
+                {
+                    // Si la valeur de detection[2] est vraie
+                    if (detection[2])
+                    {
+                        // Changer la valeur de la variable detection[2] pour false
+                        detection[2] = false;
+                    }
+
                     // Changer la valeur de detection[0] pour true
                     detection[0] = true;
-                }
-
-                // Changer la valeur de la variable detection[2] pour false
-                detection[2] = false;
+                }              
             }
 
             // Si le symbole actuel est un tiret
@@ -81,12 +86,16 @@ while (initiales == "")
                     // Ajouter le symbole actuel à la fin de initiales
                     initiales += symbole;
 
+                    // Si la valeur de detection[2] est vraie
+                    if (detection[2])
+                    {
+                        // Changer la valeur de la variable detection[2] pour false
+                        detection[2] = false;
+                    }
+
                     // Changer la valeur de detection[1] pour true
                     detection[1] = true;
                 }
-
-                // Changer la valeur de la variable detection[2] pour false
-                detection[2] = false;
             }
         }
 
