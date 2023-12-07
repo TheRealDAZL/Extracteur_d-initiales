@@ -1,4 +1,4 @@
-# Createur-dinitiales
+# Extracteur_d-initiales
 Mon programme permet d'extraire les initiales à partir de strings qui peuvent contenir plein de caractères superflus, et il redonne des initiales bien formatées.
 
 Voici la liste des symboles acceptés par mon programme (chaque symbole autorisé se trouve entre guillemets), et tout symbole qui n'est pas dans cette liste sera tout simplement ignoré :
